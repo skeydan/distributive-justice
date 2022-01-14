@@ -1,0 +1,313 @@
+---
+title: "Distributive Justice"
+subtitle: "A travel journal. Beginnings"
+author: "Sigrid Keydana"
+format: 
+  revealjs: 
+    theme: moon
+    slide-number: true
+    self-contained: true
+    preview-links: true
+    footer: AI Impact Working Group @RStudio, PBC
+editor: visual
+---
+
+## Distributive Justice: What it's about
+
+<br /> <br />
+
+> What is it that deﬁnes a fair and just distribution of rights, resources, burdens, and opportunities?
+
+::: notes
+Motivation:
+
+-   Show how questions treated there matter to the topics of interest to this working group.
+
+-   Focus on the assumptions and values underlying the conceptions presented
+:::
+
+## Apology
+
+<br /> <br /><br />
+
+I don't have a PhD in this, nor have I thought about this stuff for decades.
+
+## Yet
+
+<br />
+
+Human society is about us. No "expert" should keep us from thinking for ourselves.
+
+<br />
+
+. . .
+
+::: {style="font-size: 80%; line-height: 0.8;"}
+Example: Scientific papers on ML/AI fairness/ethics.
+
+-   In the best case, formalization adds nothing to the validity of the points made.
+
+-   In worse ones, it hides assumptions and/or intimidates readers, so they don't question them.
+
+-   In the worst, it is intentionally used to hide assumptions.
+:::
+
+## Topics
+
+<br /><br />
+
+-   Why distributive justice (in the context of ML/AI)?
+
+-   Mapping the space
+
+-   Equality of opportunity in popular views
+
+-   Back to ML/AI: How to change the world?
+
+# Why distributive justice? {style="text-align: center;"}
+
+## So, we're implementing algorithmic fairness
+
+As in:
+
+-   Given true outcome $Y$ ("x does their job well"), the result of hiring check $\hat{Y}$ does not depend on protected attribute $A$. (*Equality of opportunity* / *equalized odds*. To measure, compare false pos./neg. rates.) Or:
+
+-   Given the output of hiring check $\hat{Y}$, actual outcome $Y$ does not depend on protected attribute $A$. (Predictive parity. To measure, compare pos./neg. predictive values.)
+
+## So, that's easy
+
+<br /><br />
+
+We just compute the usual performance metrics, and compare them between groups.
+
+## But there's a history to everything
+
+The datasets we train on do not come out of nothing. Instead, they
+
+-   reflect decisions about what to measure, how to measure it, on whom, and so on.[^1]
+
+-   incorporate a whole baggage of historical preconditions we, as users of the data, ignore.
+
+[^1]: More abstractly, the mapping between *construct* (what we'd *like* to assess) and actual predictor (a feature in a dataset) may be anywhere between acceptable and fatally inadequate.
+
+<br />
+
+Using any of those metrics, we *preserve the status quo*. We perpepuate injustice.
+
+## Is there an alternative?
+
+<br />
+
+-   In theory, yes. For example, demographic parity (outcomes don't vary between groups).
+
+-   In practice, it's not that easy. There are decisions to be made, decisions that ultimately depend on where, *in the given context* of task and surrounding conditions, we place the desire to compensate for historical injustices.
+
+## So if we're changing the world,
+
+<br /> ... *how exactly* should we do it?
+
+<br /> <br />
+
+Enter the questions of distributive justice.
+
+# Mapping the space {style="text-align: center;"}
+
+## The right and the good
+
+*What do we all care about? What is justice about? The main candidate answers are happiness, fairness, liberty, and being good (virtue).*[^2]
+
+[^2]: Jeppe von Platz, Theories of Distributive Justice, p. 187.
+
+![Source: Jeppe von Platz, Theories of Distributive Justice, Routledge, 2020.](right_good.png)
+
+::: notes
+Why I don't like this classification:
+
+-   It seems to place very different views together. For example, "the objectively good" and "the subjectively good" would really seem diametrically opposed
+
+-   Perhaps this is a bad argument, but: this does not match political proximity (at all)
+
+-   "Teleological vs. deontological" may be a time-honored distinction in moral philosophy, but this wouldn't mean one has to keep it. Or maybe, repurpose it?
+:::
+
+## Imagine treating them as orthogonal
+
+<br />
+
+One option, maybe
+
+![](orthogonal.JPG)
+
+## Equality -- of what?
+
+<br />
+
+-   Formal equality: To each according to their performance / output.
+
+-   Equality of opportunity. *But what does that mean?*
+
+## What equality of opportunity could mean
+
+1.  We compensate for discrimination.
+2.  The above, and: We compensate for discrepancies in social status, money, etc. (the "*social lottery*").
+3.  The above, and: We compensate for differences in talents / endowments (the "*natural lottery*"). AKA: desertism. "To each according to their efforts."
+
+However: *Where do these choices come from? Why is effort low or high?* [^3]
+
+[^3]: Apart from reasons that can be traced back to discrimination etc.
+
+## Robert Sapolsky, Behave.
+
+<br />
+
+![From: Robert Sapolsky, Behave. Penguin, 2017.](sapolsky.png)
+
+## Robert Sapolsky, Behave.
+
+::: {style="font-size: 80%;"}
+Here are just a few of the things we've seen in this book that can influence the column on the right: blood glucose levels; the socioeconomic status of your family of birth; a concussive head injury; sleep quality and quantity; prenatal environment; stress and glucocorticoid levels; whether you're in pain; if you have Parkinson's disease and which medication you've been prescribed; perinatal hypoxia; your dopamine D4 receptor gene variant; if you have had a stroke in your frontal cortex; if you suffered childhood abuse; how much of a cognitive load you've borne in the last few minutes; your MAO-A gene variant; if you're infected with a particular parasite; if you have the gene for Huntington's disease; lead levels in your tap water when you were a kid; if you live in an individualist or a collectivist culture; if you're a heterosexual male and there's an attractive woman around; if you've been smelling the sweat of someone who is frightened.
+:::
+
+## Robert Sapolsky, Behave.
+
+Of all the stances of mitigated free will, the one that assigns aptitude to biology and effort to free will, or impulse to biology and resisting it to free will, is the most permeating and destructive.
+
+"You must have worked so hard" is as much a property of the physical universe and the biology that emerged from it as is "You must be so smart."
+
+And yes, being a child molester is as much a product of biology as is being a pedophile.
+
+# Equality of opportunity in popular views {style="text-align: center;"}
+
+## John Rawls: Justice as fairness
+
+<br /><br />
+
+(Basic postulate / underlying value / want to achieve:)
+
+<br />
+
+> A democratic society as a system of cooperation between free and equal citizens.
+
+## Rawls: Principles of Justice
+
+Established in "the original position" (thought experiment!), assuming a *veil of ignorance*.
+
+1.  [The principle of equal basic rights: each person has an equal claim to an adequate scheme of equal basic rights and liberties compatible with the same scheme for all.]{style="font-size: 70%;"}
+
+2.  [The principles of democratic equality:]{style="font-size: 70%;"}
+
+    a.  [The principle of fair equality of opportunity: social and economic inequalities must be attached to oﬃces and positions open to all under fair equality of opportunity.]{style="font-size: 70%;"}
+
+    b.  [The diﬀerence principle: inequalities in wealth and income are permissible only if they are to the greatest beneﬁt of the least advantaged.]{style="font-size: 70%;"}
+
+## Rawls: Difference principle
+
+![From: Ian Shapiro, The moral foundations of politics, Yale University Press, 2003.](difference_principle.png)
+
+## Rawlsian equality of opportunity
+
+<br /><br />
+
+> We should minimize the eﬀects of the *social* lottery, but allow for the eﬀects of the *natural* lottery.
+
+<br />
+
+Put differently: Differences in outcomes (wealth, education) are ok when they're due to differences in talents.
+
+## G. A. Cohen: \[Some form of\] socialism
+
+<br /><br />
+
+Basic values: Community, reciprocity, being a good person ("virtue")
+
+## Cohen: Linking justice and virtue
+
+<br />
+
+[In an economy governed by communal reciprocity, all provide what they can because others need their help, and they also all expect to receive what they need because they need it.]{style="font-size: 68%;"}
+
+[In other words, a socialist economy, where communal reciprocity governs and the moral psychologies of the members of society have fully internalized the motives appropriate to communal reciprocity, would realize the socialist principle of distribution: from each according to their abilities and to each according to their needs (CEJ, 219--20).]{style="font-size: 68%;"}
+
+[That is attractive in itself, but it is even more attractive since it allows the development of truly admirable and virtuous human beings and the exercise of their virtues.]{style="font-size: 68%;"}[^4]
+
+[^4]: Jeppe von Platz, Theories of distributive justice, p. 152.
+
+## Cohen on equality of opportunity: Desertism ("luck egalitarianism")
+
+<br />
+
+We should minimize the eﬀects of *both the natural and the social lotteries*.
+
+<br />
+
+Put differently: It is just if people are unequal in terms of holdings and welfare, as long as the inequalities reﬂect their *choices and eﬀorts* rather than morally arbitrary factors.[^5]
+
+[^5]: Emphasis mine.
+
+## "Choices and efforts" (a comment)
+
+<br />
+
+\[von Platz:\]
+
+[For the norm of equality that Cohen favors is a norm of equity, where equally hardworking people receive equal rewards for their eﬀorts (RJE, 57--60, 102--3, 154--5).]{style="font-size: 80%;"}
+
+[Slackers might receive less than achievers, but this inequality is a function only of diﬀerences in eﬀort, not of diﬀerences in endowments.]{style="font-size: 80%;"}
+
+[(If some are by nature slackers, then they are not slackers in the relevant sense;]{style="font-size: 80%;"} [slackness here is a function of choices, not abilities.]{style="font-size: 80%; color: violet;"}[)]{style="font-size: 80%;"}[^6]
+
+[^6]: [Jeppe von Platz, Theories of distributive justice, p. 129.]{style="font-size: 80%;"}
+
+## Thoughts (traveler's current state of mind)
+
+<br />
+
+-   Should we not pay people for how [useful]{style="color: cyan;"} their work is for society, *additionally*
+
+-   compensating for how hard / boring / [not-intrinsically-motivating]{style="color: cyan;"} the job is? *All that while*
+
+-   guaranteeing a basically [egalitarian]{style="color: cyan;"} distribution, because (1) categorical imperative and (2) in an egalitarian society, people treat each other better?
+
+# Back to ML/AI: How to change the world?
+
+## Possible conclusion: Transpose distributive-justice criteria to ML/AI
+
+E.g., Reuben Binns[^7] suggests that (w.r.t. COMPAS)
+
+[^7]: Reuben Binns, Fairness in Machine Learning: Lessons from Political Philosophy. https://arxiv.org/pdf/1712.03586.pdf.
+
+-   ["\[... \] its use of variables which are not the result of individuals' choices, such as being part of a family, social circle, or neighbourhood with higher rates of crime. \[...\], but they are also objectionable more generally to the extent that they are not the result of personal choices."]{style="font-size: 68%;"}
+
+-   ["\[...\], even if certain variables like one's social circle or neighbourhood were the result of individual choice \[...\], such choices may nevertheless deserve protection from negative consequences. \[...\]; for instance, one might choose to remain a resident in a high crime neighbourhood in order to make a positive difference to the community."]{style="font-size: 68%;"}
+
+## There's the broader context of ML/AI, though.
+
+<br />
+
+-   Extrinsic factors: Business models, absence of regulation, ubiquitous newspeak, corruptible governments ...
+
+-   Intrinsic difficulty: ML/AI is a generalizer by design. Could it help to rethink generalization?
+
+## Nancy Fraser on affirmation vs. transformation
+
+1.  Social justice has two concerns: redistribution and recognition.
+2.  Pursued the usual (affirmative: i.e., *dichotomy- (category-, resp.)* *preserving*) way, both can conflict or even, result in diametrically opposed policies.
+3.  The dilemma can be overcome by deconstructing the dichotomy / categories (transformation). [^8]
+
+[^8]: Compare also: Sandra Wachter, \[Bias Preservation in Machine Learning: The Legality of Fairness Metrics Under EU Non-Discrimination Law\](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3792772).
+
+## Nancy Fraser on affirmation vs. transformation
+
+<br /><br/>
+
+![From Redistribution to Recognition? Dilemmas of Justice in a "Postsocialist" Age. https://www.ethicalpolitics.org/blackwood/fraser.htm](fraser.png)
+
+## This is where the journal ends
+
+<br /><br />
+
+... for now.
+
+<br />
+
+**Thank you!!**
