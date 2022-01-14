@@ -72,7 +72,7 @@ As in:
 
 -   Given true outcome $Y$ ("x does their job well"), the result of hiring check $\hat{Y}$ does not depend on protected attribute $A$. (*Equality of opportunity* / *equalized odds*. To measure, compare false pos./neg. rates.) Or:
 
--   Given the output of hiring check $\hat{Y}$, actual outcome $Y$ does not depend on protected attribute $A$. (Predictive parity. To measure, compare pos./neg. predictive values.)
+-   Given the output of hiring check $\hat{Y}$, actual outcome $Y$ does not depend on protected attribute $A$. (*Predictive parity*. To measure, compare pos./neg. predictive values.)
 
 ## So, that's easy
 
@@ -142,7 +142,7 @@ One option, maybe
 
 <br />
 
--   Formal equality: To each according to their performance / output.
+-   Formal equality: To each according to their performances / output.s
 
 -   Equality of opportunity. *But what does that mean?*
 
